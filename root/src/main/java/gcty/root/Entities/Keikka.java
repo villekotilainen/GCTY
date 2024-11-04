@@ -30,11 +30,12 @@ public class Keikka {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "keikka")
     private List<Artisti> artistit;
 
-    public Keikka(Long keikkaId, LocalDate date, LocalDate startTime, Venue venue) {
+    public Keikka(Long keikkaId, LocalDate date, LocalDate startTime, Venue venue, List<Artisti> artistit) {
         this.keikkaId = keikkaId;
         this.date = date;
         this.startTime = startTime;
         this.venue = venue;
+        this.artistit = artistit;
     }
 
     public Long getKeikkaId() {

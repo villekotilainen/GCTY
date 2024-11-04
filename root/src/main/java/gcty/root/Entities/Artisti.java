@@ -33,6 +33,20 @@ public class Artisti {
         this.keikka = keikka;
     }
 
+    public Artisti(Long artistiId, String artistiName, String artistiGenre, String artistiHomeCountry,
+            String artistiWebsite, String artistiDescription) {
+        this.artistiId = artistiId;
+        this.artistiName = artistiName;
+        this.artistiGenre = artistiGenre;
+        this.artistiHomeCountry = artistiHomeCountry;
+        this.artistiWebsite = artistiWebsite;
+        this.artistiDescription = artistiDescription;
+    }
+
+    public Artisti() {
+        
+    }
+
     public Long getArtistiId() {
         return artistiId;
     }
