@@ -29,6 +29,10 @@ public class RolePermission {
         this.permissionDescription = permissionDescription;
     }
 
+    public RolePermission() {
+
+    }
+
     public Long getPermissionId() {
         return permissionId;
     }

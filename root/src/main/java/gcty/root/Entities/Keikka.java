@@ -37,7 +37,10 @@ public class Keikka {
         this.venue = venue;
         this.artistit = artistit;
     }
-
+    
+    public Keikka() {
+        
+    }
     public Long getKeikkaId() {
         return keikkaId;
     }

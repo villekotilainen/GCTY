@@ -33,6 +33,10 @@ public class UserRole {
         this.userRoleName = userRoleName;
     }
 
+    public UserRole() {
+        
+    }
+
     public Long getUserRoleId() {
         return userRoleId;
     }
