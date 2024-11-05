@@ -25,7 +25,7 @@ public class Venue {
 
 
     @JsonIgnore
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "Venue")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "venue")
     private List<Keikka> keikat;
 
     @OneToOne

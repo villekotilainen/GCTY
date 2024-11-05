@@ -51,7 +51,7 @@ public class UserRestController {
             existingUser.setPhone(userDetails.getPhone());
             existingUser.setPassword(userDetails.getPasswordHash());
 
-            existingUser.setUserRole(userDetails.getUserRole()); // MUUTA ETTÄ VAIN ADMIN-ROOLIN OMAAVA VOI MUUTTAA
+            existingUser.setUserRole(userDetails.getUserRoleName()); // MUUTA ETTÄ VAIN ADMIN-ROOLIN OMAAVA VOI MUUTTAA
 
             User updatedUser = userRepository.save(existingUser);
             return ResponseEntity.ok(updatedUser);

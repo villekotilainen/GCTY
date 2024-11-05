@@ -10,5 +10,5 @@ import gcty.root.Entities.UserRole;
 @Repository
 public interface UserRoleRepository extends JpaRepository<UserRole, Long> {
 
-    List<UserRole> findByRole(String userRoleName);
+    List<UserRole> findByUserRoleName(String userRoleName);
 }

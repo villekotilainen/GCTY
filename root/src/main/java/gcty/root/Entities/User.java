@@ -21,9 +21,9 @@ public class User {
 
     @ManyToOne
     @JoinColumn(name = "userRoleId") // many-to-one relationship with UserRole
-    private UserRole userRole;
+    private UserRole userRoleName;
 
-    public User(Long userId, String userName, String firstName, String lastName, String passwordHash, String email, String phone, UserRole userRole) {
+    public User(Long userId, String userName, String firstName, String lastName, String passwordHash, String email, String phone, UserRole userRoleName) {
         this.userId = userId;
         this.userName = userName;
         this.firstName = firstName;
@@ -31,7 +31,7 @@ public class User {
         this.passwordHash = passwordHash;
         this.email = email;
         this.phone = phone;
-        this.userRole = userRole;
+        this.userRoleName = userRoleName;
     }
     
     // käyttäjä ilman roolia testailuu varten :)
@@ -79,8 +79,8 @@ public class User {
         return phone;
     }
 
-    public UserRole getUserRole() {
-        return userRole;
+    public UserRole getUserRoleName() {
+        return userRoleName;
     }
 
 
@@ -113,15 +113,15 @@ public class User {
         this.phone = phone;
     }
 
-    public void setUserRole(UserRole userRole) {
-        this.userRole = userRole;
+    public void setUserRole(UserRole userRoleName) {
+        this.userRoleName = userRoleName;
     }
 
     @Override
     public String toString() {
         return "User [userId=" + userId +  ", firstName=" + firstName + ", lastName=" + lastName
                 + ", password=" + passwordHash + ", email=" + email + ", phone=" + phone + ", userrole="
-                + userRole + "]";
+                + userRoleName + "]";
     } 
 }
 

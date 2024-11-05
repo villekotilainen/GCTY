@@ -22,10 +22,10 @@ public class UserRole {
     
     @ManyToOne
     @JoinColumn(name = "permissionId")
-    private RolePermission userRolePermission;
+    private RolePermission rolePermission;
 
     @JsonIgnore
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userRole")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userRoleName")
     private List<User> users;
 
     public UserRole(Long userRoleId, String userRoleName) {
@@ -49,8 +49,8 @@ public class UserRole {
         this.userRoleName = userRoleName;
     }
 
-    public void setUserRolePermission(RolePermission userRolePermission) {
-        this.userRolePermission = userRolePermission;
+    public void setUserRolePermission(RolePermission rolePermission) {
+        this.rolePermission = rolePermission;
     }
 
     public void setUsers(List<User> users) {

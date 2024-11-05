@@ -21,7 +21,7 @@ public class RolePermission {
     private String permissionDescription;
 
     @JsonIgnore
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "rolePermission")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "userRoleName")
     private List<UserRole> userRoles;
 
     public RolePermission(Long permissionId, String permissionDescription) {
