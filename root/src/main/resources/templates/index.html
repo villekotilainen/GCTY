@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to My Application</title>
+</head>
+<body>
+
+    <header>
+        <h1>Hello!</h1>
+    </header>
+
+    <main>
+        <p th:text="${welcomeMessage}"></p>
+
+        <div>
+            <h2>Features:</h2>
+            <ul>
+                <li>Feature 1: User Authentication</li>
+                <li>Feature 2: Data Management</li>
+                <li>Feature 3: User Settings</li>
+            </ul>
+        </div>
+        
+        <div>
+            <h2>Quick Links:</h2>
+            <ul>
+
+                <li><a th:href="@{/signup}">Sign Up</a></li>
+                
+            </ul>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Application</p>
+    </footer>
+
+</body>
+</html>

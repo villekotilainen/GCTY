@@ -15,8 +15,9 @@ import jakarta.validation.Valid;
 @RequestMapping("/index")
 public class HomeController {
     
-    @GetMapping("/")
+    @GetMapping
     public String index(Model model) {
+        model.addAttribute("welcomeMessage", "Welcome!");
         return "index";
     } 
 
