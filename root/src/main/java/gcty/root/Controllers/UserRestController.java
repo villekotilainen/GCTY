@@ -92,7 +92,7 @@ public class UserRestController {
     }
 
     @PostMapping("/create")
-    public String submitForm(@Valid @ModelAttribute("user") User user, BindingResult result, Model model) {
+    public String submitUserForm(@Valid @ModelAttribute("user") User user, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "user-form";
         }
