@@ -6,13 +6,19 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class Artisti {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long artistiId;
+
+    @NotBlank
+    @Size(min = 1, max = 50)
     private String artistiName;
+    
     private String artistiGenre;
     private String artistiHomeCountry;
     private String artistiWebsite;

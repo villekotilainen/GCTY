@@ -36,10 +36,12 @@ public class RootApplication {
 		return (args) ->   {
 			log.info("Creating sample data");
 
-			UserRole adminRole = new UserRole(null, "ROLE_ADMIN");
-            UserRole userRole = new UserRole(null, "ROLE_USER");
+			UserRole adminRole = new UserRole(null, "ADMIN");
+            UserRole userRole = new UserRole(null, "USER");
+			UserRole visitorRole = new UserRole(null, "VISITOR");
             userRoleRepository.save(adminRole);
             userRoleRepository.save(userRole);
+			userRoleRepository.save(visitorRole);
 
 			User user1 = new User(null, "villek", "Ville", "Kotilainen", "1234abCD", "villek@email.com", "123 456 7890", adminRole);
 			User user2 = new User(null, "taneli", "Taneli", "Tumpelo", "heipähei123", "taneli@email.fi", "123 098 7654", userRole);

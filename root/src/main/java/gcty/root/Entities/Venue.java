@@ -12,14 +12,20 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 public class Venue {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long venueId;
+
+    @NotBlank
     private String venueName;
+
+    @NotBlank
     private String venueAddress;
+    
     private String venueDescription;
     private String venueWebsite;
 

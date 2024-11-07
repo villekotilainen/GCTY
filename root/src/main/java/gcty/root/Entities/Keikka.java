@@ -13,13 +13,19 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.validation.constraints.FutureOrPresent;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Keikka {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long keikkaId;
+
+    @NotNull(message = "Date can't be null")
+    @FutureOrPresent(message = "Date must be today or in the future")
     private LocalDate date;
+    @NotNull(message = "Starting time can't be null")
     private LocalDate startTime;
 
     @ManyToOne
