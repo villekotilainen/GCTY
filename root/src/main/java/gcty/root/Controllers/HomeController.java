@@ -13,8 +13,13 @@ import jakarta.validation.Valid;
 
 @Controller
 @RequestMapping("/index")
-public class UserController {
+public class HomeController {
     
+    @GetMapping("/")
+    public String index(Model model) {
+        return "index";
+    } 
+
     // KÄYTTÄJÄN LUONTI:
 
     @GetMapping("/signup")

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Gigs Close To You! Create user</title>
+    <!-- <link rel="stylesheet" href="/css/style.css"> Optional: Add a CSS file for styling -->
+</head>
+<body>
+    <h1>Create New User</h1>
+
+    <!-- Form for creating a new user -->
+    <form th:action="@{/users}" method="post">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required="required" th:value="${user.username}" />
+        </div>
+
+        <div>
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required="required" th:value="${user.firstname}" />
+        </div>
+
+        <div>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required="required" th:value="${user.lastname}" />
+        </div>
+
+        <div>
+            <label for="passwordHash">Password:</label>
+            <input type="password" id="passwordHash" name="passwordHash" required="required" />
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required="required" th:value="${user.email}" />
+        </div>
+
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" th:value="${user.phone}" />
+        </div>
+
+        <div>
+            <button type="submit">Create User</button>
+        </div>
+    </form>
+
+    <!-- Display validation errors, if any -->
+    <div th:if="${#fields.hasErrors()}">
+        <ul>
+            <li th:each="err : ${#fields.errors()}">
+                <span th:text="${err}"></span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
