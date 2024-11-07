@@ -11,8 +11,8 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-@Entity
-@Table(name="\"user\"")
+@Entity(name="users")
+@Table(name="\"users\"")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

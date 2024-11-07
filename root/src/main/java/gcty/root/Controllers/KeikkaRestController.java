@@ -65,7 +65,7 @@ public class KeikkaRestController {
     }
 
     
-    @DeleteMapping("/{id}") // DELETE: Poista tapahtuma ID:n perusteella
+    @DeleteMapping("/delete/{id}") // DELETE: Poista tapahtuma ID:n perusteella
     public ResponseEntity<Void> deleteKeikka(@PathVariable Long id) {
         if (keikkaRepository.existsById(id)) {
             keikkaRepository.deleteById(id);

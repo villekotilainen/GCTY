@@ -59,7 +59,7 @@ public class ArtistiRestController {
         }
     }
 
-    @DeleteMapping("/{id}") // DELETE: Poista artisti ID:n perusteella
+    @DeleteMapping("/delete/{id}") // DELETE: Poista artisti ID:n perusteella
     public ResponseEntity<Void> deleteArtisti(@PathVariable Long id) {
         if (artistiRepository.existsById(id)) {
             artistiRepository.deleteById(id);

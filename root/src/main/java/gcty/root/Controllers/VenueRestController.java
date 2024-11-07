@@ -62,7 +62,7 @@ public class VenueRestController {
         }
     }
 
-    @DeleteMapping("/{id}") // DELETE: poista venue IDn perusteella
+    @DeleteMapping("/delete/{id}") // DELETE: poista venue IDn perusteella
     public ResponseEntity<Void> deleteVenue(@PathVariable Long id) {
         if (venueRepository.existsById(id)) {
             venueRepository.deleteById(id);
